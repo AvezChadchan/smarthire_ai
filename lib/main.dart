@@ -5,8 +5,9 @@ import 'package:smarthire_ai/ResumeChecker.dart';
 import 'package:smarthire_ai/chatbot/chatbothome.dart';
 import 'package:smarthire_ai/components/StartScreen.dart';
 
-
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load();
   runApp(AIResumeApp());
 }
 
