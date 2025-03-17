@@ -17,7 +17,7 @@ class AIResumeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'AI Resume Analyzer & Chatbot.',
+      title: 'AI Resume Analyzer & Chatbot',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
