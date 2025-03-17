@@ -8,8 +8,15 @@ class chatBot extends StatefulWidget {
 }
 
 class chatBotScreen extends State<chatBot> {
-  final GeminiService geminiService =
-      GeminiService("");
+  late final String apiKey;
+  late final GeminiService geminiService;
+
+  @override
+  void initState() {
+    super.initState();
+    apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
+    geminiService = GeminiService(apiKey);
+  }
   List<Map<String, String>> chatMessages = [];
   final TextEditingController chatController = TextEditingController();
 
