@@ -2,6 +2,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 
 class GeminiService {
   final GenerativeModel model;
+  final String apiKey;
 
   GeminiService(this.apiKey)
       : model = GenerativeModel(
