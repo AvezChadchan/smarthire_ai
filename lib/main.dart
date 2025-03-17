@@ -4,6 +4,7 @@ import 'package:smarthire_ai/HomeScreen.dart';
 import 'package:smarthire_ai/ResumeChecker.dart';
 import 'package:smarthire_ai/chatbot/chatbothome.dart';
 import 'package:smarthire_ai/components/StartScreen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
