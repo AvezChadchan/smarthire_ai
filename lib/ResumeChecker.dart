@@ -10,8 +10,15 @@ class ResumeChecker extends StatefulWidget {
 }
 
 class _ResumeCheckerState extends State<ResumeChecker> {
-  final GeminiService geminiService =
-      GeminiService("");
+  late final String apiKey;
+  late final GeminiService geminiService;
+
+  @override
+  void initState() {
+    super.initState();
+    apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
+    geminiService = GeminiService(apiKey);
+  }
   String resumeContent = "No resume uploaded.";
   String score = "Your Score";
   int numericScore = 0;
