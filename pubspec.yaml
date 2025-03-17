@@ -39,7 +39,7 @@ dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/smarthirelogo.jpg"
+  image_path: "assets/images/smarthire.jpg"
 
 
 dev_dependencies:
