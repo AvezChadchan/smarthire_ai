@@ -1,16 +1,7 @@
-# resume_analyzer_bot
+#smarthire_ai
 
-A new Flutter project.
+The AI Resume Analyzer & Checker is an intelligent application designed to evaluate resumes based on various criteria such as work experience, skills, and qualifications. Using Google Gemini AI, the system reads the uploaded resume, assigns a percentage-based score, and provides feedback on eligibility for job applications.
 
-## Getting Started
+In addition to resume evaluation, the application features an interactive AI chatbot that assists users with career-related queries, resume improvement tips, and job application guidance. The chatbot leverages natural language processing to offer personalized insights, making the job-seeking process smoother and more efficient.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This app not only analyzes your resume but also suggests improvements to enhance its quality. By identifying gaps in skills, experience, and formatting, the AI provides actionable recommendations to help job seekers refine their resumes and increase their chances of securing employment.
