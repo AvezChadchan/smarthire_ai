@@ -12,15 +12,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late final String apiKey;
-  late final GeminiService geminiService;
+ late final String apiKey;
+ late final GeminiService geminiService;
+ @override
+ void initState() {
+  super.initState();
+  apiKey=dotenv.env['GEMINI_API_KEY']??'';
+  geminiService=GeminiService(apiKey);
+ }
+ 
 
-  @override
-  void initState() {
-    super.initState();
-    apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
-    geminiService = GeminiService(apiKey);
-  }
   String resumeContent = "No resume uploaded.";
   String aiSuggestions = "AI suggestions will appear here.";
 
