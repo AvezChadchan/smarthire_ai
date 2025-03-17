@@ -11,7 +11,7 @@ class ResumeChecker extends StatefulWidget {
 
 class _ResumeCheckerState extends State<ResumeChecker> {
   final GeminiService geminiService =
-      GeminiService("AIzaSyBKmzokMoJXFlJF9YWbbCHhaOoo6FLB4J8");
+      GeminiService("");
   String resumeContent = "No resume uploaded.";
   String score = "Your Score";
   int numericScore = 0;

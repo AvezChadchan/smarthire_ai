@@ -9,7 +9,7 @@ class chatBot extends StatefulWidget {
 
 class chatBotScreen extends State<chatBot> {
   final GeminiService geminiService =
-      GeminiService("AIzaSyBKmzokMoJXFlJF9YWbbCHhaOoo6FLB4J8");
+      GeminiService("");
   List<Map<String, String>> chatMessages = [];
   final TextEditingController chatController = TextEditingController();
 

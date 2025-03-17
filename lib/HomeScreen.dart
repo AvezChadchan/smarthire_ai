@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final GeminiService geminiService =
-      GeminiService("AIzaSyBKmzokMoJXFlJF9YWbbCHhaOoo6FLB4J8");
+      GeminiService("");
   String resumeContent = "No resume uploaded.";
   String aiSuggestions = "AI suggestions will appear here.";
 
