@@ -6,8 +6,7 @@ import 'package:smarthire_ai/chatbot/chatbothome.dart';
 import 'package:smarthire_ai/components/StartScreen.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
+Future<void> main() async {
   await dotenv.load();
   runApp(AIResumeApp());
 }

@@ -4,10 +4,11 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'  // Update AGP version
+        classpath 'com.android.tools.build:gradle:8.1.0'  // Update AGP version
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10"  // Update Kotlin version
     }
 }
+ext.kotlin_version = '1.9.0'  // Update if needed
 
 allprojects {
     repositories {

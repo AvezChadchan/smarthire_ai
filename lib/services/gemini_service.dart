@@ -9,7 +9,7 @@ class GeminiService {
           apiKey: apiKey,
           generationConfig: GenerationConfig(
             temperature: 0.7,
-            maxOutputTokens: 500,
+            maxOutputTokens: 1500,
             responseMimeType: 'text/plain',
           ),
         );
@@ -17,7 +17,7 @@ class GeminiService {
   Future<String> analyzeResume(String resumeText) async {
     final chat = model.startChat(history: []);
     final content = Content.text(
-        "Analyze this resume and provide improvements:\n$resumeText");
+        "Analyze this resume and provide improvements \n and first tell me the missing fields and then provide suggestions and also give mandatory fields like skills,specially mention socially communicated on another line with another paragraph:\n$resumeText");
     final response = await chat.sendMessage(content);
     return response.text ?? "Error analyzing resume.";
   }
@@ -33,7 +33,7 @@ class GeminiService {
     final chat = model.startChat(history: []);
     final content = Content.text(
         "You are an HR in an I.T company. Your job is to review the resume below and rate it from 0 to 100 based on work experience, skills, and qualifications. "
-            "Respond with only the number, nothing else:\n $resumeText");
+        "Respond with only the number, nothing else:\n $resumeText");
 
     try {
       final response = await chat.sendMessage(content);
@@ -42,7 +42,8 @@ class GeminiService {
       print("Gemini Response: $responseText"); // Debugging log
 
       // Extract only numeric score from response
-      RegExp regex = RegExp(r'\b(100|[1-9]?[0-9])\b'); // Matches numbers from 0-100
+      RegExp regex =
+          RegExp(r'\b(100|[1-9]?[0-9])\b'); // Matches numbers from 0-100
       Match? match = regex.firstMatch(responseText);
 
       if (match != null) {
@@ -55,7 +56,4 @@ class GeminiService {
       return "0"; // Return 0 in case of error
     }
   }
-
-
 }
-

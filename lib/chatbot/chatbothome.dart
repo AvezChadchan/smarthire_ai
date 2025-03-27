@@ -77,7 +77,7 @@ class ChatBotHome extends StatelessWidget {
                     fontSize: 16),
               ),
               Container(
-                  margin: EdgeInsets.only(top: 90),
+                  margin: EdgeInsets.only(top: 60),
                   width: 350,
                   child: RoundedButton(
                     callback: () {
